@@ -1,0 +1,5 @@
+{
+    "require": {
+        "onmotion/yii2-gallery": "*"
+    }
+}

@@ -187,6 +187,10 @@ DashboardAsset::register($this);
         Dashboard
         <small><?php echo date("Y/ m /j");?></small>
       </p>
+      <p>It is now
+    <script>document.write("<em>" + new Date() + "</em>"); </script>
+</p> 
+
          <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>

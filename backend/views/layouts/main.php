@@ -174,7 +174,7 @@ DashboardAsset::register($this);
          </ul>
        </li>
 
-       <li><?=Html::a('My Calender',['/album/index'],['class'=>'  fa-circle'])?></li>
+       <li><?=Html::a('My Calender',['calendar/index'],['class'=>'  fa-circle'])?></li>
        <li><?=Html::a('My Blog',['/blog/index'],['class'=>'  fa-circle'])?></li>
 
      </ul>
@@ -187,8 +187,27 @@ DashboardAsset::register($this);
    <section class="content-header">
      <p class="lead">
        Dashboard
-       <small><?php echo date("Y/ m /j");?></small>
+       <small><?php echo date("Y/ m /j /h /i /A'");?></small>
      </p>
+<!--          <p>
+    <script>document.write("<em>" + new Date() + "</em>"); </script>
+</p> --> 
+<script>
+(function () {
+
+  var clockElement = document.getElementById( "clock" );
+
+  function updateClock ( clock ) {
+    clock.innerHTML = new Date().toLocaleTimeString();
+  }
+
+  setInterval(function () {
+      updateClock( clockElement );
+  }, 1000);
+
+}());
+?>
+</script>
         <?= Breadcrumbs::widget([
            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
        ]) ?>

@@ -24,7 +24,7 @@ use dosamigos\tinymce\TinyMce;
     'clientOptions' => [
         'browser_spellcheck'=>true,
         'plugins' => [
-            "advlist autolink lists link charmap print preview anchor",
+            "advlist autolink lists link image charmap print preview anchor",
             "searchreplace visualblocks code fullscreen",
             "insertdatetime media table contextmenu paste"
         ],

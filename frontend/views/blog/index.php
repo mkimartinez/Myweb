@@ -2,34 +2,20 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-
+use yii\widgets\ListView;
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\BlogSearch */
+/* @var $searchModel frontend\models\BlogSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Blogs';
+$this->title = ' My Blog';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="blog-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1 class="text-align:center"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Blog', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-    <?= GridView::widget([
+    <?= ListView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'published time',
-            'content:ntext',
-            'author',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
+       'itemView' => '_blog',
     ]); ?>
 </div>

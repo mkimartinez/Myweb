@@ -18,9 +18,11 @@ $this->params['breadcrumbs'][] = $this->title;
           <div class="row">
               <div class="col-md-4">
                   <div class="well">
-                      <img class="thumbnail img-responsive" alt="Bootstrap template"
-                          src="img/metro.jpg" />
-                          
+                   <!--    <img class="thumbnail img-responsive" alt="Bootstrap template"
+                          src="img/metro.jpg" /> -->
+                          <?= Html::img('@web/img/metro.jpg', ['alt' => 'My logo','height'=>'300','width'=>'300']) ?>
+
+                         
                           <div class="caption">
                             <h3>xihu</h3>
                             <p>this photo was taken while on trip to hangzhou</p>
@@ -30,8 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
               </div>
               <div class="col-md-4">
                   <div class="well">
-                      <img class="thumbnail img-responsive" alt="Bootstrap template"
-                          src="img/shexing.jpg" />
+                      <!-- <img class="thumbnail img-responsive" alt="Bootstrap template"
+                          src="img/shexing.jpg" /> -->
+                          <?= Html::img('@web/img/shexing.jpg', ['alt' => 'My logo','height'=>'300','width'=>'300']) ?>
                           <div class="caption">
                             <h3>xihu</h3>
                             <p>this photo was taken while on trip to hangzhou</p>
@@ -41,8 +44,10 @@ $this->params['breadcrumbs'][] = $this->title;
               </div>
               <div class="col-md-4">
                   <div class="well">
-                      <img class="thumbnail img-responsive" alt="Bootstrap template"
-                          src="img/training.jpg" />
+                      <!-- <img class="thumbnail img-responsive" alt="Bootstrap template"
+                          src="img/training.jpg" /> -->
+                             <?= Html::img('@web/img/training.jpg', ['alt' => 'My logo','height'=>'300','width'=>'300']) ?>
+
                           <div class="caption">
                             <h3>xihu</h3>
                             <p>this photo was taken while on trip to hangzhou</p>

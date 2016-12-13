@@ -1,33 +1,149 @@
 <?php
 
-namespace app\controllers;
+namespace frontend\controllers;
+
 use Yii;
-use app\models\Posts;
-use app\models\PostsSearch;
+use app\models\Blog;
+use frontend\models\BlogSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
-class BlogController extends \yii\web\Controller
+use yii\data\ActiveDataProvider;
+/**
+ * BlogController implements the CRUD actions for Blog model.
+ */
+class BlogController extends Controller
 {
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+        ];
+    }
+
+    /**
+     * Lists all Blog models.
+     * @return mixed*/
+/*   public function actionIndex()
+    {
+        $searchModel = new BlogSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }*/
+
+        /**
+     * Lists all Blog models.
+     * @return mixed
+     */
+   public function actionIndex()
+    {
+        $dataProvider = new ActiveDataProvider([
+        'query' => Blog::find(),
+        'pagination' => [
+        'pageSize' => 4,
+        ],
+         'sort' => [
+          'defaultOrder' => [
+            'id' => SORT_DESC, 
+        ]
+    ],
+        ]);
+
+
+       return $this->render('index', [
+        'dataProvider' => $dataProvider,
+        //'itemView' => '_post',
+        ]);
+
+    }
+
+    /**
+     * Displays a single Blog model.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionView($id)
+    {
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+
+    /**
+     * Creates a new Blog model.
+     * If creation is successful, the browser will be redirected to the 'view' page.
+     * @return mixed
+     */
     public function actionCreate()
     {
-        return $this->render('create');
+        $model = new Blog();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
     }
 
-    public function actionDelete()
+    /**
+     * Updates an existing Blog model.
+     * If update is successful, the browser will be redirected to the 'view' page.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionUpdate($id)
     {
-        return $this->render('delete');
+        $model = $this->findModel($id);
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->render('update', [
+                'model' => $model,
+            ]);
+        }
     }
 
-    public function actionEdit()
+    /**
+     * Deletes an existing Blog model.
+     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionDelete($id)
     {
-        return $this->render('edit');
+        $this->findModel($id)->delete();
+
+        return $this->redirect(['index']);
     }
 
-    public function actionIndex()
+    /**
+     * Finds the Blog model based on its primary key value.
+     * If the model is not found, a 404 HTTP exception will be thrown.
+     * @param integer $id
+     * @return Blog the loaded model
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    protected function findModel($id)
     {
-        return $this->render('index');
+        if (($model = Blog::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
     }
-
 }

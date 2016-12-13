@@ -118,3 +118,9 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+.customImage {
+  width: 300px;
+  height: 350px;
+}
+
+

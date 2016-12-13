@@ -4,33 +4,24 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\PostsSearch */
+/* @var $searchModel frontend\models\BlogSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Posts';
+$this->title = ' My Blog';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="posts-index">
+<div class="blog-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1 class="text-align:center"><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Posts', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        //'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
+            //'time_published',
             'title',
-            'time published',
             'content:ntext',
-            ' likes',
-            // 'comments',
-            // 'photos',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

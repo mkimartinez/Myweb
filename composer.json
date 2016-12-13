@@ -12,15 +12,18 @@
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/yiisoft/yii2"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "onmotion/yii2-gallery": "*",
+      "pistol88/yii2-gallery": "*",
+
         "2amigos/yii2-tinymce-widget": "*",
-        "yiisoft/yii2-jui":"~2.0.0"
+        "yiisoft/yii2-jui":"~2.0.0",
+        "marekpetras/yii2-calendarview-widget": "^1.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

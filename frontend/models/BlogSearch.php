@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace frontend\models;
 
 use Yii;
 use yii\base\Model;
@@ -19,7 +19,7 @@ class BlogSearch extends Blog
     {
         return [
             [['id'], 'integer'],
-            [['published time', 'content', 'author'], 'safe'],
+            [['time_published', 'title', 'content'], 'safe'],
         ];
     }
 
@@ -60,11 +60,11 @@ class BlogSearch extends Blog
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'published time' => $this->published time,
+            'time_published' => $this->time_published,
         ]);
 
-        $query->andFilterWhere(['like', 'content', $this->content])
-            ->andFilterWhere(['like', 'author', $this->author]);
+        $query->andFilterWhere(['like', 'title', $this->title])
+            ->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;
     }

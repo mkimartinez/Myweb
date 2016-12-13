@@ -5,21 +5,21 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "blog".
+ * This is the model class for table "post".
  *
  * @property integer $id
- * @property string $time_published
- * @property string $title
- * @property string $content
+ * @property integer $title
+ * @property integer $date_published
+ * @property integer $content
  */
-class Blog extends \yii\db\ActiveRecord
+class Post extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'blog';
+        return 'post';
     }
 
     /**
@@ -28,10 +28,8 @@ class Blog extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['time_published', 'title', 'content'], 'required'],
-            [['time_published'], 'safe'],
-            [['content'], 'string'],
-            [['title'], 'string', 'max' => 255],
+            [['id', 'title', 'date_published', 'content'], 'required'],
+            [['id', 'title', 'date_published', 'content'], 'integer'],
         ];
     }
 
@@ -42,8 +40,8 @@ class Blog extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'time_published' => 'Time Published',
             'title' => 'Title',
+            'date_published' => 'Date Published',
             'content' => 'Content',
         ];
     }

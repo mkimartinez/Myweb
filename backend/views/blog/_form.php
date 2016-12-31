@@ -14,7 +14,14 @@ use dosamigos\tinymce\TinyMce;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model,'time_published')->widget(DatePicker::className(),['clientOptions' => ['defaultDate' => '2014-01-01']]) ?>
+    <?= $form->field($model,'time_published')->widget(DatePicker::className(),
+    [
+   'dateFormat'=>'y-M-d',
+    'clientOptions' => [
+    'defaultDate' => date('y-M-d'),
+    //'format'=>'yyyy-mm-dd'
+
+    ]]) ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 <?= $form->field($model, 'content')->widget(TinyMce::className(), [

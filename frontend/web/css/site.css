@@ -119,8 +119,11 @@ a.desc:after {
     outline: none;
 }
 .customImage {
-  width: 300px;
-  height: 350px;
+    width: 800px;
+  height: 450px;
 }
-
+#mki{
+    height: 800px;
+    width: 100%;
+}
 

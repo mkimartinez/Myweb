@@ -20,10 +20,22 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "onmotion/yii2-gallery": "*",
       "pistol88/yii2-gallery": "*",
+       "deka6pb/yii2-simple-todo": "*"  ,
+
+
+        "miloschuman/yii2-highcharts-widget": "dev-master",
 
         "2amigos/yii2-tinymce-widget": "*",
         "yiisoft/yii2-jui":"~2.0.0",
-        "marekpetras/yii2-calendarview-widget": "^1.0"
+        "marekpetras/yii2-calendarview-widget": "^1.0",
+        "vivekmarakana/yii2-image-gallery-selector": "dev-master",
+        "noam148/yii2-image-manager": "*",
+        "modernkernel/yii2-photoswipe": "*",
+        "imanilchaudhari/yii2-social-share": "dev-master",
+        "assayer-pro/yii2-social-likes": "*",
+        "sadovojav/yii2-gallery-module": "dev-master",
+        "sizeg/yii2-jqplot": "^1.0",
+        "vova07/yii2-start-themes": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

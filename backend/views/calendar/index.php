@@ -43,12 +43,12 @@ echo CalendarView::widget(
         'endYear' => date('Y') + 1,
 
         'link' => false,
-        /* alternates to link , is called on every models valueField, used in Html::a( valueField , link )
+        /* alternates to link , is called on every models valueField, used in Html::a( valueField , link )*/
         'link' => 'site/view',
         'link' => function($model,$calendar){
             return ['calendar/view','id'=>$model->id];
         },
-        */
+        
 
         'dayRender' => false,
         /* alternate to dayRender

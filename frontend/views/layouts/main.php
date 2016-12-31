@@ -43,17 +43,22 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
 
     } else {
-      $menuItems[] =['label' => 'About', 'url' => ['/site/about']];
-
-
-
-
-
+      $menuItems[] =['label' => 'About', 'url' => ['/site/about'],
+      'items'=>[
+              ['label' => 'Family', 'url' => ['/site/about']],
+              ['label' => 'Work', 'url' => ['/site/about']],
+              ['label' => 'Voluntary', 'url' => ['/site/about']]]];
       $menuItems[] =['label' => 'Gallery', 'url' => ['/site/gallery']];
-      $menuItems[] =['label' => 'Education', 'url' => ['/site/education']];
+      $menuItems[] =['label' => 'Education', 'url' => ['/site/education'],
+      'items'=>[
+              ['label' => 'University', 'url' => ['/site/education']],
+              ['label' => 'High School', 'url' => ['/site/about']],
+              ['label' => 'Primary', 'url' => ['/site/about']],
+              ['label' => 'Other Trainings', 'url' => ['/site/gallery']]]];
       $menuItems[] =['label' => 'Awards', 'url' => ['/site/awards']];
       $menuItems[] =['label' => 'Blog', 'url' => ['/blog/index']];
-        $menuItems[] = '<li>'
+              
+      $menuItems[] = '<li>'
 
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
@@ -97,24 +102,15 @@ AppAsset::register($this);
                 <p><span class="fa fa-phone"></span>&nbsp;&nbsp;&nbsp;+1 8818250664</p>
                 <p><span class="fa fa-envelope"></span>&nbsp;&nbsp;&nbsp;<a href="mailto:mail@example.com">martinamakobe@gmail.com</a></p>
             </div>
-            <div class="col-md-4">
-                <p style="font-size:18px;">NEWSLETTER</p>
-                <p>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Enter your email..." />
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Subscribe</button>
-                        </span>
-                    </div>
-                </p>
-                <p><br /></p>
-                <p>
-                    <a class="fa fa-twitter footer-socialicon" target="_blank" href="https://twitter.com/"></a>
-                    <a class="fa fa-facebook footer-socialicon" target="_blank" href="https://www.facebook.com/"></a>
-                    <a class="fa fa-google-plus footer-socialicon" target="_blank" href="https://plus.google.com/"></a>
-                    <a class="fa fa-linkedin footer-socialicon" target="_blank" href="https://plus.google.com/"></a>
-                </p>
-            </div>
+            <div class="">
+  <?= \imanilchaudhari\socialshare\ShareButton::widget([
+        'style'=>'horizontal',
+        'networks' => ['facebook','googleplus','linkedin','twitter'],
+        'data_via'=>'imanilchaudhari', //twitter username (for twitter only, if exists else leave empty)
+        'data_via'=>'martinamakobe@gmail.com', //tw
+]); ?>
+
+</div>
         </div>
     </div>
 </footer>

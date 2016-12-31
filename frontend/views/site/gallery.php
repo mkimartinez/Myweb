@@ -11,124 +11,153 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php
 
  ?>
-<div class="site-gallery">
-    <h1><?= Html::encode($this->title) ?></h1>
-    <h4>check my recently posted photo below</h4>
-          </div>
-          <div class="row">
-              <div class="col-md-4">
-                  <div class="well">
-                   <!--    <img class="thumbnail img-responsive" alt="Bootstrap template"
-                          src="img/metro.jpg" /> -->
-                          <?= Html::img('@web/img/metro.jpg', ['alt' => 'My logo','height'=>'300','width'=>'300']) ?>
+ <h2>My gallery</h2>
+ <?=
 
-                         
-                          <div class="caption">
-                            <h3>xihu</h3>
-                            <p>this photo was taken while on trip to hangzhou</p>
-                            <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</a> <a href="#" class="btn btn-default" role="button">Comment</a></p>
-                          </div>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="well">
-                      <!-- <img class="thumbnail img-responsive" alt="Bootstrap template"
-                          src="img/shexing.jpg" /> -->
-                          <?= Html::img('@web/img/shexing.jpg', ['alt' => 'My logo','height'=>'300','width'=>'300']) ?>
-                          <div class="caption">
-                            <h3>xihu</h3>
-                            <p>this photo was taken while on trip to hangzhou</p>
-                            <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</a> <a href="#" class="btn btn-default" role="button">Comment</a></p>
-                          </div>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="well">
-                      <!-- <img class="thumbnail img-responsive" alt="Bootstrap template"
-                          src="img/training.jpg" /> -->
-                             <?= Html::img('@web/img/training.jpg', ['alt' => 'My logo','height'=>'300','width'=>'300']) ?>
-
-                          <div class="caption">
-                            <h3>xihu</h3>
-                            <p>this photo was taken while on trip to hangzhou</p>
-                            <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</a> <a href="#" class="btn btn-default" role="button">Comment</a></p>
-                          </div>
-                  </div>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-md-4">
-                  <div class="well">
-                      <img class="thumbnail img-responsive" alt="Bootstrap template"
-                          src="img/voluntary.jpg" />
-                          <div class="caption">
-                            <h3>xihu</h3>
-                            <p>this photo was taken while on trip to hangzhou</p>
-                            <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</a> <a href="#" class="btn btn-default" role="button">Comment</a></p>
-                          </div>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="well">
-                      <img class="thumbnail img-responsive" alt="Bootstrap template"
-                          src="img/mki.jpg" />
-                          <div class="caption">
-                            <h3>xihu</h3>
-                            <p>this photo was taken while on trip to hangzhou</p>
-                            <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</a> <a href="#" class="btn btn-default" role="button">Comment</a></p>
-                          </div>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="well">
-                      <img class="thumbnail img-responsive" alt="Bootstrap template"
-                          src="img/codingcamp.jpg" />
-                          <div class="caption">
-                            <h3>xihu</h3>
-                            <p>this photo was taken while on trip to hangzhou</p>
-                            <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</a> <a href="#" class="btn btn-default" role="button">Comment</a></p>
-                          </div>
-                  </div>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-md-4">
-                  <div class="well">
-                      <img class="thumbnail img-responsive" alt="Bootstrap template"
-                          src="img/sandbox.jpg" />
-                          <div class="caption">
-                            <h3>xihu</h3>
-                            <p>this photo was taken while on trip to hangzhou</p>
-                            <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</a> <a href="#" class="btn btn-default" role="button">Comment</a></p>
-                          </div>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="well">
-                      <img class="thumbnail img-responsive" alt="Bootstrap template"
-                          src="img/friendly.jpg" />
-                          <div class="caption">
-                            <h3>xihu</h3>
-                            <p>this photo was taken while on trip to hangzhou</p>
-                            <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</a> <a href="#" class="btn btn-default" role="button">Comment</a></p>
-                          </div>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="well">
-                      <img class="thumbnail img-responsive" alt="Bootstrap template"
-                          src="img/image1.jpg" />
-                          <div class="caption">
-                            <h3>xihu</h3>
-                            <p>this photo was taken while on trip to hangzhou</p>
-                            <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</a> <a href="#" class="btn btn-default" role="button">Comment</a></p>
-                          </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </div>
-    </section>
-  </div>
-    <!-- <code><?= __FILE__ ?></code> -->
-</div>
+\modernkernel\photoswipe\Gallery::widget([
+    'items' => [
+        [
+            'image' => 'img/mki.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/mki.jpg',
+        ],
+       [
+            'image' => 'img/codingcamp.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/codingcamp.jpg',
+        ],
+        [
+            'image' => 'img/metro.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/mki.jpg',
+        ],
+       
+        [
+            'image' => 'img/voluntary.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/voluntary.jpg',
+        ],
+        [
+            'image' => 'img/sandbox.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/sandbox.jpg',
+        ],
+        [
+            'image' => 'img/mki.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/mki.jpg',
+        ],
+        [
+            'image' => 'img/friendly.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x700',
+            'thumb' => 'img/friendly.jpg',
+        ],
+        [
+            'image' => 'img/culture1.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/culture1.jpg',
+        ],
+        [
+            'image' => 'img/culture2.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/culture2.jpg',
+        ],
+        [
+            'image' => 'img/culture3.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/culture3.jpg',
+        ],
+        [
+            'image' => 'img/culture3.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/culture3.jpg',
+        ],
+        [
+            'image' => 'img/culture3.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/culture3.jpg',
+        ],
+        [
+            'image' => 'img/culture3.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/culture3.jpg',
+        ],
+        [
+            'image' => 'img/culture3.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/culture3.jpg',
+        ],
+        [
+            'image' => 'img/culture3.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/culture3.jpg',
+        ],
+        [
+            'image' => 'img/culture3.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/culture3.jpg',
+        ],
+        [
+            'image' => 'img/culture3.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/culture3.jpg',
+        ],
+        [
+            'image' => 'img/culture3.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/culture3.jpg',
+        ],
+        [
+            'image' => 'img/culture3.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/culture3.jpg',
+        ],
+        [
+            'image' => 'img/culture3.jpg',
+            'title' => 'Image Title 1',
+            'caption' => 'Caption 2',
+            'size' => '1024x685',
+            'thumb' => 'img/culture3.jpg',
+        ],
+        
+    ]
+])
+?>

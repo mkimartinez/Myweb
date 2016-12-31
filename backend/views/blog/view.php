@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
         //'formart'=>'raw',
         'attributes' => [
 
-            'id',
+        
             'time_published',
             'title',
             'content:html',

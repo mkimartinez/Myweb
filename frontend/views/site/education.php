@@ -7,7 +7,12 @@ use yii\helpers\Html;
 $this->title = 'Education';
 ?>
 
-
+<style type="text/css">
+.mki{
+    height: 300px;
+    width: 500px;
+}
+</style>
 
 
 
@@ -23,7 +28,14 @@ $this->title = 'Education';
             <div class="tab-content">
               <div class="tab-pane active" id="tab_1">
 
-                <p>Exactly like the original bootstrap tabs except you should use
+
+                <div class="media">
+  <div class="media-left">
+     
+     <!--  <img class=" mki" src="img/mki.jpg" alt="..."> -->
+
+       <p> <img class=" mki" src="img/mki.jpg" alt="..." style="float:left;margin:2px">
+<strong>E</strong>xactly like the original bootstrap tabs except you should use
                   the custom wrapper  to achieve this style.</p>
                 A wonderful serenity has taken possession of my entire soul,
                 like these sweet mornings of spring which I enjoy with my whole heart.
@@ -58,9 +70,28 @@ $this->title = 'Education';
                 that I neglect my talents. I should be incapable of drawing a single stroke
                 at the present moment; and yet I feel that I never was a greater artist than now.
               </div>
+ 
+  </div>
+  
+</div>
+
+               
               <!-- /.tab-pane -->
               <div class="tab-pane" id="tab_2">
-                The European languages are members of the same family. Their separate existence is a myth.
+
+
+
+
+
+
+                <div class="media">
+  <div class="media-left media-middle">
+    <a href="#">
+      
+    </a>
+  </div>
+  <div class="media-body">
+    <p class="media-heading"><img class="mki" src="img/shexing.jpg" alt="..." style="float:right">Middle aligned mediaThe European languages are members of the same family. Their separate existence is a myth.
                 For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ
                 in their grammar, their pronunciation and their most common words. Everyone realizes why a
                 new common language would be desirable: one could refuse to pay expensive translators. To
@@ -85,6 +116,11 @@ $this->title = 'Education';
                 achieve this, it would be necessary to have uniform grammar, pronunciation and more common
                 words. If several languages coalesce, the grammar of the resulting language is more simple
                 and regular than that of the individual languages.
+              </p>
+  
+  </div>
+</div>
+                
               </div>
               <!-- /.tab-pane -->
               <div class="tab-pane" id="tab_3">

@@ -22,11 +22,11 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'error','todo','gallery'],
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'income'],
+                        'actions' => ['logout', 'index', 'income','gallery'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -65,6 +65,15 @@ class SiteController extends Controller
     public function actionAwards()
     {
         return $this->render('awards');
+    }
+
+     public function actionGallery()
+    {
+        return $this->render('gallery');
+    }
+public function actionTodo()
+    {
+        return $this->render('todo');
     }
 
     /**

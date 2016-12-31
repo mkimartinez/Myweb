@@ -8,7 +8,7 @@ use backend\models\IncomeSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\widgets\LinkPager;
 /**
  * IncomeController implements the CRUD actions for Income model.
  */
@@ -33,6 +33,8 @@ class IncomeController extends Controller
      * Lists all Income models.
      * @return mixed
      */
+
+
     public function actionIndex()
     {
         $searchModel = new IncomeSearch();
@@ -41,6 +43,7 @@ class IncomeController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            
         ]);
     }
 

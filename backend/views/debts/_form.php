@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use yii\jui\DatePicker;
 /* @var $this yii\web\View */
 /* @var $model app\models\Debts */
 /* @var $form yii\widgets\ActiveForm */
@@ -12,13 +12,24 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'debt_date')->textInput() ?>
+   <?= $form->field($model,'debt_date')->widget(DatePicker::className(),
+    [
+   'dateFormat'=>'y-M-d',
+    'clientOptions' => [
+    'defaultDate' => date('y-M-d'),
+    //'format'=>'yyyy-mm-dd'
+
+    ]]) ?>
 
     <?= $form->field($model, 'person_name')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'amount')->textInput() ?>
-
-    <?= $form->field($model, 'current_status')->textInput(['maxlength' => true]) ?>
+    <p>Current status:<br/>
+    <select name="current status" required>
+        <option value="" disabled selected hidden>please choose the current status of the debt</option>
+          <option value="0"> not paid</option>
+            <option value="1">paid</option>
+    </select></p>
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 

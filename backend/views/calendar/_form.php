@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use yii\jui\DatePicker;
 /* @var $this yii\web\View */
 /* @var $model common\models\Calendar */
 /* @var $form yii\widgets\ActiveForm */
@@ -12,7 +12,14 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'date')->textInput() ?>
+   <?= $form->field($model,'date')->widget(DatePicker::className(),
+    [
+   'dateFormat'=>'y-M-d',
+    'clientOptions' => [
+    'defaultDate' => date('y-M-d'),
+    //'format'=>'yyyy-mm-dd'
+
+    ]]) ?>
 
     <?= $form->field($model, 'value')->textarea(['rows' => 6]) ?>
 

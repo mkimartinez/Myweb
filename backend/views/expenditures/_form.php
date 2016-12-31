@@ -12,9 +12,17 @@ use yii\jui\DatePicker;
 <div class="expenditures-form">
 
     <?php $form = ActiveForm::begin(); ?>
+    <?= $form->field($model,'date')->widget(DatePicker::className(),
+    [
+   'dateFormat'=>'y-M-d',
+    'clientOptions' => [
+    'defaultDate' => date('y-M-d'),
+    //'format'=>'yyyy-mm-dd'
+
+    ]]) ?>
     
 
-   <?= $form->field($model,'date')->widget(DatePicker::className(),['clientOptions' => ['defaultDate' => '2014-01-01']]) ?>
+  <!--  <?= $form->field($model,'date')->widget(DatePicker::className(),['clientOptions' => ['defaultDate' => '2014-01-01']]) ?> -->
   
 
     <?= $form->field($model, 'place')->textInput(['maxlength' => true]) ?>

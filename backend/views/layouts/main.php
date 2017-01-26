@@ -39,7 +39,7 @@ $this->registerCss(" small {
      <!-- mini logo for sidebar mini 50x50 pixels -->
      <span class="logo-mini"><b>A</b>LT</span>
      <!-- logo for regular state and mobile devices -->
-     <span class="logo-lg"><b>MY</b>web</span>
+     <span class="logo-lg"><b>My</b>web</span>
    </a>
    <!-- Header Navbar: style can be found in header.less -->
    <nav class="navbar navbar-static-top">
@@ -203,8 +203,13 @@ $this->registerCss(" small {
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                 <div class="pull-left">
+                  <?= Html::beginForm(['/site/profile'], 'post')
+           . Html::submitButton(
+               'Profile',
+               ['class' => 'btn bg-default btn-flat']
+           )
+           . Html::endForm() ?>
                 </div>
                 <div class="pull-right">
                   <?= Html::beginForm(['/site/logout'], 'post')
@@ -255,6 +260,8 @@ $this->registerCss(" small {
             <li><?=Html::a('Expenditures',['/expenditures/index'],['class'=>'fa fa-circle-o'])?></li>
       <li><?=Html::a('Incomes',['income/index'],['class'=>'fa fa-circle-o'])?></li>
              <li><?=Html::a('Debts',['/debts/index'],['class'=>'fa fa-circle-o'])?></li>
+             <li><?=Html::a('Contacts',['/contacts/index'],['class'=>'fa fa-circle-o'])?></li>
+             <li><?=Html::a('Users',['/site/users'],['class'=>'fa fa-circle-o'])?></li>
          </ul>
        </li>
 
@@ -266,10 +273,10 @@ $this->registerCss(" small {
            </span>
          </a>
          <ul class="treeview-menu">
-           <li><?=Html::a('General',['/album/index'],['class'=>'fa fa-circle-o'])?></li>
+           <li><?=Html::a('General',['general/index'],['class'=>'fa fa-circle-o'])?></li>
            <li><?=Html::a('Daily plans',['/album/index'],['class'=>'fa fa-circle-o'])?></li>
            <li><?=Html::a('Longterm Plans',['/album/index'],['class'=>'fa fa-circle-o'])?></li>
-          <li><?=Html::a('Appointments',['/album/index'],['class'=>'fa fa-circle-o'])?></li>
+          <li><?=Html::a('Appointments',['/appointments/index'],['class'=>'fa fa-circle-o'])?></li>
          </ul>
        </li>
 
@@ -300,7 +307,7 @@ $this->registerCss(" small {
            <li><?=Html::a('Project profits',['/album/index'],['class'=>'fa fa-circle-o'])?></li>
            <li><?=Html::a('Project Evaluations',['/album/index'],['class'=>'fa fa-circle-o'])?></li>
            <li><?=Html::a('Certs and awards',['/certs/index'],['class'=>'fa fa-circle-o'])?></li>
-            <li><?=Html::a('My CV',['/album/index'],['class'=>'fa fa-circle-o'])?></li>
+            <li><?=Html::a('cv',['/site/cv'],['class'=>'fa fa-circle-o'])?></li>
          </ul>
        </li>
 

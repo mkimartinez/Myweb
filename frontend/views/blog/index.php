@@ -7,7 +7,7 @@ use yii\widgets\ListView;
 /* @var $searchModel frontend\models\BlogSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = ' My Blog';
+//$this->title = ' My Blog';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="blog-index">

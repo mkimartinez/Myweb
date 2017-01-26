@@ -106,4 +106,9 @@ echo Highcharts::widget([
     ]
 ]);
  ?>
+ <?php 
+ $mysqli=NEW MYSQLi('localhost','root','199212','myweb');
+
+ ?>
+
  

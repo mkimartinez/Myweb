@@ -13,7 +13,7 @@ use common\widgets\Alert;
 DashboardAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
-<!DOCTYPE html>
+ 
 <html lang="<?= Yii::$app->language ?>">
 <head>
    <meta charset="<?= Yii::$app->charset ?>">
@@ -21,6 +21,7 @@ DashboardAsset::register($this);
    <?= Html::csrfMetaTags() ?>
    <title><?= Html::encode($this->title) ?></title>
    <?php $this->head() ?>
+   
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <?php $this->beginBody() ?>

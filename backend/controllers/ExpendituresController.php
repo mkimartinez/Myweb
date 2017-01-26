@@ -8,7 +8,7 @@ use app\models\ExpendituresSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\data\ActiveDataProvider;
 /**
  * ExpendituresController implements the CRUD actions for Expenditures model.
  */
@@ -35,11 +35,19 @@ class ExpendituresController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new ExpendituresSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+        $dataProvider = new ActiveDataProvider([
+        'query' => Expenditures::find(),
+        'pagination' => [
+        'pageSize' => 4,
+        ],
+         'sort' => [
+          'defaultOrder' => [
+            'id' => SORT_DESC, 
+        ]
+    ],
+        ]);
         return $this->render('index', [
-            'searchModel' => $searchModel,
+            //'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }

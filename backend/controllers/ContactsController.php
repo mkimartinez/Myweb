@@ -3,16 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use app\models\House;
-use backend\models\HouseSearch;
+use app\models\Contacts;
+use backend\models\ContactsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\jui\DatePicker;
+
 /**
- * HouseController implements the CRUD actions for House model.
+ * ContactsController implements the CRUD actions for Contacts model.
  */
-class HouseController extends Controller
+class ContactsController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class HouseController extends Controller
     }
 
     /**
-     * Lists all House models.
+     * Lists all Contacts models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new HouseSearch();
+        $searchModel = new ContactsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class HouseController extends Controller
     }
 
     /**
-     * Displays a single House model.
+     * Displays a single Contacts model.
      * @param integer $id
      * @return mixed
      */
@@ -57,13 +57,13 @@ class HouseController extends Controller
     }
 
     /**
-     * Creates a new House model.
+     * Creates a new Contacts model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new House();
+        $model = new Contacts();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -75,7 +75,7 @@ class HouseController extends Controller
     }
 
     /**
-     * Updates an existing House model.
+     * Updates an existing Contacts model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -94,7 +94,7 @@ class HouseController extends Controller
     }
 
     /**
-     * Deletes an existing House model.
+     * Deletes an existing Contacts model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class HouseController extends Controller
     }
 
     /**
-     * Finds the House model based on its primary key value.
+     * Finds the Contacts model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return House the loaded model
+     * @return Contacts the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = House::findOne($id)) !== null) {
+        if (($model = Contacts::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

@@ -14,7 +14,8 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
-        ' w3schools.com/lib/w3.css',
+        ' //w3schools.com/lib/w3.css',
+        '//fonts.googleapis.com/css?family=Raleway'
     ];
     public $js = [
     ];

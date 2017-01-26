@@ -57,7 +57,15 @@ AppAsset::register($this);
               ['label' => 'Other Trainings', 'url' => ['/site/gallery']]]];
       $menuItems[] =['label' => 'Awards', 'url' => ['/site/awards']];
       $menuItems[] =['label' => 'Blog', 'url' => ['/blog/index']];
-              
+      //$menuItems[] =['label' =>Html::img('img/mki.jpg',['alt' => 'Me'],['style' => ['width' => '100px', 'height' => '100px']]) , 'url' => ['/blog/index']];
+      $menuItems[] =['label' =>'<img src="img/mki.jpg" alt="me" width="30", height="30" class="img-circle" >',
+
+                    'items'=>[
+              ['label' =>'<img src="img/mki.jpg" alt="me" width="50", height="50" class="img-circle" >'],
+
+              ['label' => 'Other Trainings','class'=>['pull-right'], 'url' => ['/site/gallery']]]
+
+                    ];
       $menuItems[] = '<li>'
 
             . Html::beginForm(['/site/logout'], 'post')
@@ -71,6 +79,7 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,
+        'encodeLabels'=>false,
     ]);
     NavBar::end();
     ?>
